@@ -6,7 +6,7 @@ Web scraping of http://www.fallingrain.com/world/IN/ is done in this code.
 I have mainly used Request and BeatuifulSoup Library for implementing the code.The Requests library allows us to make use of HTTP within our Python programs in a human readable way, and the Beautiful Soup module is designed to get web scraping done quickly.
 
 Links at multiple level changes by single character.
-Example :
+Example 
 Cities in Rajasthan, starting with 'Ja' has link : http://www.fallingrain.com/world/IN/24/a/J/
 and starting with 'Ja' has link : http://www.fallingrain.com/world/IN/24/a/J/a/
 Thus we add characters to the link, to get onto next-level.
