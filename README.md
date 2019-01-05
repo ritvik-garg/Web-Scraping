@@ -36,3 +36,4 @@ Lastly pandas dataframe is exported to CSV file.
 References :
 --
 https://www.digitalocean.com/community/tutorials/how-to-scrape-web-pages-with-beautiful-soup-and-python-3
+https://www.youtube.com/watch?v=v5DDW5dyfyc
