@@ -31,3 +31,6 @@ Required data is tagged under 'td' tag, which is tagged under 'tr' tag, thus if 
 If we only have 'href' tag, then we need to go onto next-level to fetch required data.
 
 Lastly pandas dataframe is exported to CSV file.
+
+
+REFERENCES : https://www.digitalocean.com/community/tutorials/how-to-scrape-web-pages-with-beautiful-soup-and-python-3
