@@ -18,6 +18,6 @@ If the url is active, then we need to see whether the given webpage contains the
 
 If webpage contains required data, then the data is added to the Pandas Dataframe. 
 
-If it contains links to next-level, then we generate next-level url.
+If it contain only links to the next-level, then we generate next-level url.
 
 Lastly dataframe is exported to CSV 
