@@ -8,21 +8,26 @@ All error scenarios (e.g. if the website is down or you don’t get the expected
 APPROACH :
 --------
 
-I have mainly used Request and BeatuifulSoup Library for implementing the code.The Requests library allows us to make use of HTTP within our Python programs in a human readable way, and the Beautiful Soup module is designed to get web scraping done quickly.
+Request and BeatuifulSoup Library has been mainly used for implementing the code.
+The Requests library allows us to make use of HTTP within our Python programs in a human readable way, and the Beautiful Soup module is designed to get web scraping done quickly.
 
-Links at multiple level changes by single character.
+Links/URL at different level changes by just single character.
 For Example : 
 Cities in Rajasthan, starting with 'J' has link : http://www.fallingrain.com/world/IN/24/a/J/
 and starting with 'Ja' has link : http://www.fallingrain.com/world/IN/24/a/J/a/
 Thus we add characters to the link, to get onto next-level.
 
 
-We generate links and then check whether the given link or url is valid or not(Exception Handling is performed to 
+Firstly, we generate links and then check whether the given link or url is active or not.
 
-If the url is active, then we need to see whether the given webpage contains the required data in the form of 'City', 'Latitude', etc. or the links leading to next level. 
+If the url is active, then we see whether the given webpage contains the required data in the form of 'City', 'Latitude', etc. or the links leading to next level. 
 
-If webpage contains required data, then the data is added to the Pandas Dataframe. 
+If webpage contains required data, then the data is added to the Pandas Dataframe, so that data manipulations can been done easily.
 
-If it contain only links to the next-level, then we generate next-level url.
+If it contain only links to the next-level, then we generate next-level url and repeat the procedure.
 
-Lastly dataframe is exported to CSV 
+Required data is tagged under 'td' tag, which is tagged under 'tr' tag, thus if soup object has 'tr' tag, then we need to add the data to our dataframe.
+
+If we only have 'href' tag, then we need to go onto next-level to fetch required data.
+
+Lastly pandas dataframe is exported to CSV file.
